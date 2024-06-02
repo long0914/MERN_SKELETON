@@ -14,7 +14,8 @@
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "development": "^0.0.6",
-    "nodemon": "^3.0.2"
+    "express": "^4.19.2",
+    "nodemon": "^3.1.2"
   },
   "scripts": {
     "development": "nodemon"
