@@ -1,7 +1,7 @@
 //this file combines the express file and the config file to start the server
 
-import config from './../config/config'  //importing the config file
-import app from './express'// need to import the express file
+import config from './config/config.js'  //importing the config file
+import app from './express.js'// need to import the express file
 
 app.get("/", (req, res) => {
  res.json({ message: "Welcome to User application." });
