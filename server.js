@@ -1,6 +1,8 @@
 const express = require("express");
 const path = require("path");
 const app = express();
+const assetsRouter = require("./server/assets-router");app.use("/src", assetsRouter); //get from server/assets-router.js
+
 
 app.use("/", express.static(path.join(__dirname, "public")));
 //express.static middleware is used to serve static files from the public directory at the root of the server. This means that any files in the public directory can be accessed directly via the browser.
@@ -19,7 +21,7 @@ app.get("/*", (_req, res) => {
 //Wildcard Route catches all other routes and serves the index.html file. This is necessary for client-side routing to work properly. The index.html file is served from the public directory.
 
 
-const { PORT = 5000 } = process.env;
+const { PORT = 5001 } = process.env;
 app.listen(PORT, () => {
  console.log();
  console.log(` App running in port ${PORT}`);
